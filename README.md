@@ -8,7 +8,7 @@ A slim Cookiecutter template for a Python package
 
 * [GitHub - audreyfeldroy/cookiecutter-pypackage: Cookiecutter template for a Python package.](https://github.com/audreyfeldroy/cookiecutter-pypackage)
 
-## Quickstart
+## Getting Started
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
 
@@ -16,7 +16,13 @@ Install the latest Cookiecutter if you haven't installed it yet (this requires C
 pip install -U cookiecutter
 ```
 
-Generate a Python package project:
+Generate a Python package project from local project directory:
+
+```sh
+cookiecutter cookiecutter-py-package-slim/
+```
+
+Generate a Python package project from GitHub:
 
 ```sh
 cookiecutter https://github.com/liviaerxin/cookiecutter-py-package-slim.git
