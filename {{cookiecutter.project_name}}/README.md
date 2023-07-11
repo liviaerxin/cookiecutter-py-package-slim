@@ -46,20 +46,27 @@ Optionally, if you add new dependencies, then run again
 pip install -e .
 ```
 
-Finally, when completing development, build and publish the distribution
+Finally, when completing development, `build` and `publish` the distribution
+
+### Build using `build` package
 
 ```sh
-# Build using `build` tool
 pip install build
+
 python -m build -s
 python -m build
 
 unzip -l ./dist/*.whl
 ```
 
+### Publish with `twine`
+
 ```sh
-# Publish
 pip install twine
+
+# Check before publish
+twine check dist/*
+
 twine upload dist/*
 ```
 
