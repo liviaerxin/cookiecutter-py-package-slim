@@ -28,8 +28,11 @@ Generate a Python package project from GitHub:
 cookiecutter https://github.com/liviaerxin/cookiecutter-py-package-slim.git
 ```
 
-Then:
+## TO-DO
 
+- [ ] add github actions 
+- [ ] use `pyproject.toml` and deprecate `setup.cfg`
+https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/
 
 ## Features
 
