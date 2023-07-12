@@ -9,7 +9,7 @@
     "version": "1.0.0",
     "use_pytest": "y",
     "use_black": "y",
-    "use_pypi_deployment_with_github_actions": "n",
+    "add_github_actions": "y",
     "add_pyup_badge": "n",
     "command_line_interface": [
         "Click",
@@ -28,5 +28,9 @@
     "packaging": [
         "pip",
         "poetry"
+    ],
+    "_copy_without_render": [
+        ".github/workflows/*.yml",
+        ".github/workflows/*.yaml"
     ]
 }

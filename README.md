@@ -30,8 +30,13 @@ cookiecutter https://github.com/liviaerxin/cookiecutter-py-package-slim.git
 
 ## TO-DO
 
-- [ ] add github actions 
+- [x] add github actions 
 - [ ] use `pyproject.toml` and deprecate `setup.cfg`
+- [ ] Unite using `setup.py`, `setup.cfg` and `pyproject.toml` files all in `pyproject.toml`.
+- [ ] Use `pip` to build wheel instead of `build` tool.
+- [ ] [pip wheel](https://pip.pypa.io/en/stable/cli/pip_wheel/)
+- [ ] add tests
+
 https://www.seanh.cc/2022/05/21/publishing-python-packages-from-github-actions/
 
 ## Features

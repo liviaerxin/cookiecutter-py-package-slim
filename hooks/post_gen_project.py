@@ -1,14 +1,33 @@
 #!/usr/bin/env python
 import os
+import shutil
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
 
+def delete(path, ignore_exist=True):
+    """path could either be relative or absolute. """
+    # check if file or directory exists
+    if os.path.isfile(path) or os.path.islink(path):
+        # remove file
+        os.remove(path)
+    elif os.path.isdir(path):
+        # remove directory and all its content
+        shutil.rmtree(path)
+    else:
+        if ignore_exist:
+            return
+        else:
+            raise ValueError(f"Path {path} is not a file or dir.")
+    
 def remove_file(filepath):
     filepath = os.path.join(PROJECT_DIRECTORY, filepath)
-    os.remove(filepath) if os.path.exists(filepath) else None
-
-
+    delete(filepath)
+    
+def remove_dir(dirpath):
+    dirpath = os.path.join(PROJECT_DIRECTORY, dirpath)
+    delete(dirpath)
+    
 if __name__ == "__main__":
     if "{{ cookiecutter.create_author_file }}" != "y":
         remove_file("AUTHORS.rst")
@@ -25,3 +44,6 @@ if __name__ == "__main__":
 
     if "{{ cookiecutter.packaging }}" != "poetry":
         remove_file("poetry.lock")
+        
+    if "{{ cookiecutter.add_github_actions|lower }}" != "y":
+        remove_dir(".github")

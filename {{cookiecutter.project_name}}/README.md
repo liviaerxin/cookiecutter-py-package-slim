@@ -69,9 +69,3 @@ twine check dist/*
 
 twine upload dist/*
 ```
-
-## TO-DO
-
-- [ ] Unite using `setup.py`, `setup.cfg` and `pyproject.toml` files all in `pyproject.toml`.
-- [ ] Use `pip` to build wheel instead of `build` tool.
-  - [pip wheel](https://pip.pypa.io/en/stable/cli/pip_wheel/)
